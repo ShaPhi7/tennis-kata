@@ -163,11 +163,17 @@ public final class TennisMatch {
 		{	
 			if (gamesCompleted % 2 == 0)
 			{
-				sjScore.add(scoreBoardPlayerA.get(i) + "-" + scoreBoardPlayerB.get(i));
+				sjScore.add(new StringBuilder()
+						.append(scoreBoardPlayerA.get(i))
+						.append("-")
+						.append(scoreBoardPlayerB.get(i)));
 			}
 			else
 			{
-				sjScore.add(scoreBoardPlayerB.get(i) + "-" + scoreBoardPlayerA.get(i));
+				sjScore.add(new StringBuilder()
+						.append(scoreBoardPlayerB.get(i))
+						.append("-")
+						.append(scoreBoardPlayerA.get(i)));
 			}
 		}
 		return sjScore.toString();
